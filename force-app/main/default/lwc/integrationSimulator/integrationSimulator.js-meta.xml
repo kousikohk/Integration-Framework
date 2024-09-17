@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata" fqn="integrationSimulator">
+    <apiVersion>57.0</apiVersion> <!-- Use the appropriate API version -->
+    <isExposed>true</isExposed>
+    <targets>
+        <!-- Make the LWC available on Lightning Record Pages -->
+        <target>lightning__RecordPage</target>
+    </targets>
+</LightningComponentBundle>

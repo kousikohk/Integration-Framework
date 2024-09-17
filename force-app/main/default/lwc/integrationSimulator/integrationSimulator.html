@@ -1,0 +1,34 @@
+<template>
+    <lightning-card title="Integration Simulator" icon-name="action:call">
+        <div class="slds-m-around_medium">
+            <lightning-combobox
+                name="integrationSelect"
+                label="Select Integration"
+                value={selectedIntegration}
+                options={integrationOptions}
+                onchange={handleIntegrationChange}>
+            </lightning-combobox>
+
+            <lightning-input
+                type="checkbox"
+                label="Use Mock"
+                checked={useMock}
+                onchange={handleMockChange}>
+            </lightning-input>
+
+            <lightning-button
+                label="Simulate Call"
+                onclick={handleSimulate}
+                class="slds-m-top_medium">
+            </lightning-button>
+
+            <template if:true={response}>
+                <lightning-textarea 
+                    label="Response"
+                    value={response}
+                    readonly>
+                </lightning-textarea>
+            </template>
+        </div>
+    </lightning-card>
+</template>
